@@ -1,1 +1,12 @@
-<p>phone works!</p>
+<div *ngIf="myPhones$ | async as phones">
+  <tbody *ngFor="let phone of phones.data.phones">
+    <td>{{ phone.brand }}</td>
+    <td>{{ phone.model }}</td>
+    <td>{{ phone.valoration }}</td>
+    <td>{{ phone.price }}</td>
+    <td>{{ phone.processor.coreNumer }} {{ phone.processor.clockRate }}</td>
+    <td>{{ phone.ram.capacity }}</td>
+    <td>{{ phone.battery.mAhNumber }}</td>
+    <td>{{ phone.antutu }}</td>
+  </tbody>
+</div>
